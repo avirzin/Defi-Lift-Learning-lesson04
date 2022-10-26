@@ -12,7 +12,7 @@ async function main() {
   console.log(`Deploying contracts with the account:, ${deployer.address}`);
   console.log(`Account balance:, ${(await deployer.getBalance()).toString()}`);
 
-  const Token = await hre.ethers.getContractFactory("LLDefiL04Ex02");
+  const Token = await hre.ethers.getContractFactory("LLDefiL04Ex03");
   console.log("Start the deployment of the contract...");
   const token = await Token.deploy();
 
