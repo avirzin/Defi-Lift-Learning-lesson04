@@ -12,16 +12,18 @@ async function main() {
   console.log(`Deploying contracts with the account:, ${deployer.address}`);
   console.log(`Account balance:, ${(await deployer.getBalance()).toString()}`);
 
-  const Token = await hre.ethers.getContractFactory("LLDefiL04Ex03");
+  const Token = await hre.ethers.getContractFactory("LLDefiL04Ex04SC");
   console.log("Start the deployment of the contract...");
-  const token = await Token.deploy();
+  
+  // References the existing deployed contract
+  const token = await Token.deploy("0xa7dEf1A0bEA0b8519a0e4c62D3C993354B757CD7");
+  
+  // For the regular tokens
+  //const token = await Token.deploy();
 
   //await token.deployed();
   console.log("Token deployed to:", token.address); 
 
-  /*console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${token.address}`
-  );*/
 }
 
 // We recommend this pattern to be able to use async/await everywhere
