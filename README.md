@@ -1,13 +1,22 @@
-# Sample Hardhat Project
+# Defi Lift Learning Lesson 04 Exercises
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Some exercises for Defi Lifr Learning course.
 
-Try running some of the following tasks:
+Just some Hardhat commands that I used the most.
+
+To compile:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+npx hardhat compile
+```
+To deploy:
+
+```shell
+npx hardhat run scripts/deploy.js --network polygon
+```
+
+To verify:
+
+```shell
+npx hardhat verify [ADRESS] --network polygon --contract [FILE_AND_NAME] [OPTIONAL_ARGUMENT_SAME_AT_THE_DEPLOY]
 ```
